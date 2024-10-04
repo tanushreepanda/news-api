@@ -1,10 +1,36 @@
-h1{
+.headline-container {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    background-color: #000;
+    color: #fff;
+    padding: 10px 0;
+}
+
+#headline {
+    display: inline-block;
+    animation-name: scroll;
+    animation-duration: 150s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes scroll {
+    0% { 
+        transform: translateX(5%);
+     }
+    100% { transform: translateX(-100%); }
+}
+
+h1 {
     text-align: center;
 }
+
 #news-articles {
     display: grid;
     grid-template-columns: auto auto auto auto auto;
 }
+
 .article {
     padding: 10px;
     border: 1px solid black;
